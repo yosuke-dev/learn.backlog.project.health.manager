@@ -1,0 +1,1 @@
+rootProject.name = "backlog.project.health.manager"
