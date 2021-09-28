@@ -1,6 +1,6 @@
-package com.example.domain.value
+package com.example.domain.value.issue
 
-data class ProjectId(val value:Long){
+open class IssueCount(open val value:Int){
     companion object {
         private const val MIN_VALUE = 0
     }
@@ -8,6 +8,4 @@ data class ProjectId(val value:Long){
     init {
         if (value < MIN_VALUE) throw IllegalArgumentException("value must be greater than or equal to $MIN_VALUE.")
     }
-
-    operator fun compareTo(other: ProjectId) = value.compareTo(other.value)
 }

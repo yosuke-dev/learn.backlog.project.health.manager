@@ -1,4 +1,4 @@
-package com.example.domain.value
+package com.example.domain.value.issue
 
 data class IssueStatus(val value: StatusType){
     enum class StatusType {

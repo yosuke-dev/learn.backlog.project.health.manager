@@ -1,4 +1,4 @@
-package com.example.domain.value
+package com.example.domain.value.version
 
 data class VersionId(val value:Long){
     companion object {

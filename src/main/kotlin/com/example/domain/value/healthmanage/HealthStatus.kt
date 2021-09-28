@@ -1,6 +1,6 @@
-package com.example.domain.value
+package com.example.domain.value.healthmanage
 
-data class HealthStatus(val value: StatusType){
+data class HealthStatus(val value: Float){
     enum class StatusType {
         VERY_HEALTHY,
         HEALTHY,
@@ -11,9 +11,20 @@ data class HealthStatus(val value: StatusType){
 
     operator fun compareTo(other: HealthStatus) = value.compareTo(other.value)
 
-    fun DisplayValue(): String
+    fun getType(): StatusType
     {
-        return when (value){
+        return when {
+            value < 80 ->  StatusType.HAVE_MEDICAL_EXAMINATION
+            value < 95 ->  StatusType.OBSERVATION_NEEDED
+            value < 105 ->  StatusType.NORMAL
+            value < 120 ->  StatusType.HEALTHY
+            else ->  StatusType.VERY_HEALTHY
+        }
+    }
+
+    fun getTypeName(): String
+    {
+        return when (getType()){
             StatusType.VERY_HEALTHY -> "Very healthy"
             StatusType.HEALTHY -> "Very healthy"
             StatusType.NORMAL -> "Very healthy"
