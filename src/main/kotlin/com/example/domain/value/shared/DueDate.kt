@@ -1,4 +1,4 @@
-package com.example.domain.value
+package com.example.domain.value.shared
 
 import java.util.*
 
