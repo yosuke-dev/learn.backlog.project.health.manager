@@ -11,5 +11,4 @@ ktor {
 backlog {
     spaceId = ""
     apiKey = ""
-    projectId =
 }
