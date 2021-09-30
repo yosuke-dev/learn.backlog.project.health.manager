@@ -19,15 +19,4 @@ open class HealthStatus(open val value: Float){
             else ->  StatusType.VERY_HEALTHY
         }
     }
-
-    fun getTypeName(): String
-    {
-        return when (getType()){
-            StatusType.VERY_HEALTHY -> "Very healthy"
-            StatusType.HEALTHY -> "Very healthy"
-            StatusType.NORMAL -> "Very healthy"
-            StatusType.OBSERVATION_NEEDED -> "Very healthy"
-            StatusType.HAVE_MEDICAL_EXAMINATION -> "Very healthy"
-        }
-    }
 }
